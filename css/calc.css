@@ -1,0 +1,110 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: bold 14px Arial, sans-serif;
+}
+
+html {
+	height: 100%;
+	background: white;
+}
+
+.calc {
+	
+	padding: 10px 15px 10px 22px;
+	background: gray;
+	border-radius: 2px;
+	position: relative;
+	float: left;
+	margin:20px;
+}
+
+/* display portion */
+.display span.clear {
+	float: left;
+}
+
+/* Inset shadow on the screen to create indent */
+.display .screen {
+	height: 40px;
+	width: 287px;
+	float: left;
+	padding: 0 10px;
+	background: rgb(72, 68, 68);;
+	border-radius: 3px;
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+
+.buttons, .display {overflow: hidden;}
+
+
+/* Applying same to the buttons */
+.buttons span, .display span.clear {
+	float: left;
+	position: relative;
+	display: 0;
+	cursor: pointer;
+	width: 66px;
+	height: 36px;
+	background: white;
+	border-radius: 3px;
+	margin: 0 7px 11px 0;
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+	user-select: none;
+}
+
+ span{
+	background: #FFF0F5;
+	margin-right: 0;
+}
+
+,.buttons span.result, span.result {
+	background: #509FB8;
+	color: #8E5F5F;
+}
+
+.display span.clear {
+	background: #22ddee;
+	color: white;
+}
+
+/* Some hover effects */
+.buttons span:hover,  span:hover {
+	background: #9c89f6;
+	color: white;
+}
+
+.buttons span.result:hover,  span.result:hover {
+	background: #abb850;
+	color: #ffffff;
+}
+
+.display span.clear:hover {
+	background: #f68991;
+	color: white;
+}
+
+
+.buttons span:active,  span:active {
+	box-shadow: 0px 0px #6b54d3;
+	display: 4px;
+}
+
+.buttons span.result:active,  span.result:active {
+	box-shadow: 0px 0px #717a33;
+	display: 4px;
+}
+
+.display span.clear:active {
+	display: 4px;
+	box-shadow: 0px 0px #d3545d;
+}
