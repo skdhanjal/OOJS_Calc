@@ -3,7 +3,7 @@
 
 MainApp.calc.initCalc = function(parentId){
 	var calculatorModule = new MainApp.calc.components.calculator.CalculatorModule();	
-	calculatorModule.createCalculator(parentId);
+	calculatorModule.showCaculator(parentId);
 }
 
 // initialise the calc app into the given view

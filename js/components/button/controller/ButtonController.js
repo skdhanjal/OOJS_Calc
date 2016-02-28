@@ -32,8 +32,6 @@ MainApp.calc.components.button.ButtonController.prototype.addButtonEvents = func
 	for(var i = 0; i < btnEls.length; i++) {
 		btnEls[i].onclick = this.handleButtonClick.bind(this);
 	}
-
-
 }
 
 

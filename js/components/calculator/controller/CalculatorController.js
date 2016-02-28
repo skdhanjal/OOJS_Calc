@@ -27,14 +27,14 @@ MainApp.calc.components.calculator.CalculatorController.prototype.handleEqualBut
 	var equation = inputVal,
 		lastChar = equation[equation.length - 1];
 		// Replace all instances of x and ÷ with * and / respectively. This can be done easily using regex and the 'g' tag which will replace all instances of the matched character/substring
-		equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
-		// Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
-		if(operators.indexOf(lastChar) > -1 || lastChar == '.'){
-			equation = equation.replace(/.$/, '');
-		}
-		if(equation){
-			this.updateDisplayValue(eval(equation));
-		}
+	equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+	// Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
+	if(operators.indexOf(lastChar) > -1 || lastChar == '.'){
+		equation = equation.replace(/.$/, '');
+	}
+	if(equation){
+		this.updateDisplayValue(eval(equation));
+	}
 }
 
 MainApp.calc.components.calculator.CalculatorController.prototype.handleDecimalButton = function(btnVal, valueToShow, decimalAdded){
@@ -96,14 +96,8 @@ MainApp.calc.components.calculator.CalculatorController.prototype.calculate = fu
 		default:
 			this.handleKeyButton(valueToShow, btnVal);
 			break;		
-	}
-    
+	}    
 }
-
-MainApp.calc.components.calculator.CalculatorController.prototype.getButtonsView = function getButtonsView(){
-    return this.buttonCtrl.getButtonsView();
-}
-
 
 
 
